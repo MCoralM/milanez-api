@@ -13,11 +13,11 @@ public class QueryParameter {
 
     public QueryParameter(String name, Object value) {
         params = new HashMap<>();
-        params.put(name, value);
+        params.put(name.toLowerCase(), value);
     }
 
     public QueryParameter add(String name, Object value) {
-        params.put(name, value);
+        params.put(name.toLowerCase(), value);
         return this;
     }
 
