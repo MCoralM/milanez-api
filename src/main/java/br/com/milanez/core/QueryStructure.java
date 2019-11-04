@@ -29,9 +29,9 @@ public final class QueryStructure {
     public static QueryStructure getInstance(String queryTemplate) {
         if (instances == null) {
             instances = new HashMap<>();
-            instances.put(queryTemplate, XmlUtil.unmarshall(queryTemplate.toLowerCase(), QueryStructure.class));
+            instances.put(queryTemplate, XmlUtil.unmarshall(queryTemplate, QueryStructure.class));
         } else if (!instances.containsKey(queryTemplate)) {
-            instances.put(queryTemplate, XmlUtil.unmarshall(queryTemplate.toLowerCase(), QueryStructure.class));
+            instances.put(queryTemplate, XmlUtil.unmarshall(queryTemplate, QueryStructure.class));
         }
 
         return instances.get(queryTemplate);
@@ -51,7 +51,7 @@ public final class QueryStructure {
         }
 
         for (Query query : queries) {
-            if (query.getName().equals(name.toLowerCase())) {
+            if (query.getName().equals(name)) {
                 return query;
             }
         }
